@@ -11,9 +11,6 @@ export const Footer = () => {
                     <a href="#" className="nav-link px-2 fg-2">Features</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link px-2 fg-2">Pricing</a>
-                </li>
-                <li className="nav-item">
                     <a href="#" className="nav-link px-2 fg-2">FAQs</a>
                 </li>
                 <li className="nav-item">

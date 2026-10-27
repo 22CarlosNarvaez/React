@@ -2,48 +2,66 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+
     VitePWA({
       registerType: 'autoUpdate',
+
       workbox: {
-        globPatterns: ['**/*.{js,jsx,css,html,ico,png,svg,jpg,webp}']
+        globPatterns: [
+          '**/*.{js,jsx,css,html,ico,png,svg,jpg,webp}'
+        ]
       },
-      includeAssets: ['descarga.png', 'descargab.png', 'PWA.png', 'favicon.svg'],
+
+      includeAssets: [
+        'icons/icon-192.png',
+        'icons/icon-512.png',
+        'icons/icon-maskable-512.png',
+        'icons/logo.png',
+        'descarga.png',
+        'descargab.png',
+        'PWA.png'
+      ],
+
       manifest: {
-        name: 'Mi primera PWA',
-        short_name: 'MyAppPWA',
-        description: 'La PWA mas fantastica del mundo',
+        name: 'Lumora',
+        short_name: 'Lumora',
+        description: 'La PWA más fantástica del mundo',
+
         scope: '/',
         start_url: '/',
         display: 'standalone',
+
         theme_color: '#000000',
         background_color: '#ffffff',
 
-
-        screenshots: [
+        icons: [
           {
-            src: "PWA.png",
-            sizes: "1280x640",
-            type: "image/png",
-            form_factor: "wide"
+            src: '/icons/icon-192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: '/icons/icon-512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          },
+          {
+            src: '/icons/icon-maskable-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable'
           }
         ],
 
-        icons: [
+        screenshots: [
           {
-            src: 'descarga.png',
-            sizes: '192x188',
+            src: '/PWA.png',
+            sizes: '1280x640',
             type: 'image/png',
-            purpose: 'any maskable'
-          },
-          {
-            src: 'descargab.png',
-            sizes: '225x225',
-            type: 'image/png',
-            purpose: 'any maskable'
+            form_factor: 'wide'
           }
         ]
       }

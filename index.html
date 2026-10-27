@@ -3,36 +3,104 @@
 
 <head>
 
-  <script>
-    (function () {
-        try {
-            var t = localStorage.getItem('theme')
-            if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-            document.documentElement.setAttribute('data-bs-theme', t)
-        } catch (e) {}
-    })()
-</script>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Primera PWA - Taller</title>
 
-  <!-- SEO Tags-->
-  <meta name="author" content="Carlos Andres Castro Jaramillo">
-  <meta name="description" content="Taller 1 de Maquetación Web">
-  <meta name="keywords" content="TALLER, taller, Taller, PWA, React">
+  <!-- Favicon del navegador -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/icons/icon-192.png"
+  />
+
+  <!-- Icono para dispositivos Apple -->
+  <link
+    rel="apple-touch-icon"
+    href="/icons/icon-192.png"
+  />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Red Science</title>
+
+  <!-- SEO Tags -->
+  <meta
+    name="author"
+    content="Carlos Andres Castro Jaramillo"
+  />
+
+  <meta
+    name="description"
+    content="Taller 1 de Maquetación Web"
+  />
+
+  <meta
+    name="keywords"
+    content="TALLER, taller, Taller, PWA, React"
+  />
 
   <!-- Optimization Tags -->
-  <meta name="theme-color" content="#000000">
-  <meta name="MobileOptimized" content="width">
-  <meta name="HandheldFriendly" content="true">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta
+    name="theme-color"
+    content="#000000"
+  />
+
+  <meta
+    name="MobileOptimized"
+    content="width"
+  />
+
+  <meta
+    name="HandheldFriendly"
+    content="true"
+  />
+
+  <meta
+    name="mobile-web-app-capable"
+    content="yes"
+  />
+
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  />
+
+  <!-- Configuración inicial del tema -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+
+        if (!t) {
+          t = matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light';
+        }
+
+        document.documentElement.setAttribute(
+          'data-bs-theme',
+          t
+        );
+      } catch (e) {}
+    })();
+  </script>
+
 </head>
 
 <body>
+
   <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+
+  <script
+    type="module"
+    src="/src/main.jsx"
+  ></script>
+
 </body>
 
 </html>
+
+
