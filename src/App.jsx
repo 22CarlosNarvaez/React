@@ -7,13 +7,11 @@ import { ForgotPassword } from './features/auth/components/ForgotPassword'
 import { Props } from './features/landing/components/Props'
 import { Api } from './features/landing/components/Api'
 
-
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/React">
             <div className="d-flex flex-column min-vh-100">
                 <Header />
 
@@ -25,9 +23,14 @@ function App() {
                         <Route path="/forgot-password" element={<ForgotPassword />} />
                         <Route path="/props" element={<Props />} />
                         <Route path="/api" element={<Api />} />
+
                         <Route
                             path="*"
-                            element={<h2 className="text-center my-5">404 - Página no encontrada</h2>}
+                            element={
+                                <h2 className="text-center my-5">
+                                    404 - Página no encontrada
+                                </h2>
+                            }
                         />
                     </Routes>
                 </main>
