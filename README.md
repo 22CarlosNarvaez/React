@@ -1,4 +1,5 @@
-# Lumora
+# Mi primer proyecto REACT (RED SCIENCE)
+
 
 Aplicación web progresiva (PWA) construida con React y Vite. El proyecto reúne una página de inicio, pantallas de acceso y registro, recuperación de contraseña, navegación adaptable y cambio de tema claro/oscuro.
 
